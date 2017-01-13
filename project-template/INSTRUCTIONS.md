@@ -18,6 +18,7 @@ Ready to set up a new open source project? Let's get started!
 - [ ] Create new Slack channel for repo, using `#github-<repo name>` as convention.
 - [ ] Add GitHub, Travis and Code Climate config to Slack channel.
 - [ ] Add Codecov to Slack channel as custom webhook.
+- [ ] Clone new blank open source repo, copy and replace files from this forked repo to new repo.
 - [ ] Announce new repo in social media.
 
 ## Badges
