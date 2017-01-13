@@ -15,6 +15,9 @@ Ready to set up a new open source project? Let's get started!
 - [ ] Configure repo services and badges. Instructions below in `Badges` section.
 - [ ] Modify service yml's, such as `.travis.yml`.
 - [ ] Remove `project name` folder and contents from the repository.
+- [ ] Create new Slack channel for repo, using `#github-<repo name>` as convention.
+- [ ] Add GitHub, Travis and Code Climate config to Slack channel.
+- [ ] Add Codecov to Slack channel as custom webhook.
 - [ ] Announce new repo in social media.
 
 ## Badges
