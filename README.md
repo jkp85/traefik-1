@@ -2,4 +2,4 @@
 
 Documentation and templates for Open Source management at 3Blades.
 
-Setup instructions [located here](project-template/INSTRUCTIONS.mds).
+Setup instructions [located here](project-template/INSTRUCTIONS.md).
