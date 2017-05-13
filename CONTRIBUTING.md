@@ -26,13 +26,24 @@ We encourage the use of forks, even for our core maintainers. The following step
 
 ## Commit Messages
 
-Commit messages in `<repo-name>` start with a prefix that coincides with an issue `label`, then `/`, then `iss[#]`, such as `fix/iss3`. It's possible that an issue for the problem you are trying to solve does not exist, in that case, please help us open one. Even little things like typos in a document are worth documenting. Labels listed below:
+Commit messages should be of the form:
+ `<repo name>/<issue type>/ issue #<issue number> <commit info>`.
+ 
+For example: `app-backend/fix/issue #101 -  Fix the bug.`
+
+Currently, the possible issue types are the following:
 
 - `fix`: If the commit is working towards a bug fix.
 - `feature`: If the commit is working towards a new feature.
 - `chore`: If the commit was a chore, like updating a dependency or updating Travis.
 - `doc`: If the commit is a change to documentation.
 - `test`: If the commit contains a change to the test suite.
+
+Obviously, some commits may apply to multiple issue types (almost all commits should have tests, for example ;) ). Just use your best judgment in these cases.
+
+All commits **must** reference an issue. If there is not an issue relevant to your commit; help us open one.
+
+The commit message itself should be more informative than "Fix the bug" as seen in the example. Something like "Change the foo method in bar.py so an exception is raised for invalid arguments" is more appropriate.
 
 ## Issues
 
