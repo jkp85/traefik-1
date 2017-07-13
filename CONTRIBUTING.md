@@ -7,31 +7,37 @@ Interested in making a contribution? Great! Just read through this guide and you
 - [Forks](#forks)
 - [Commit Messages](#commit-messages)
 - [Issues](#issues)
-- [Contribution tips and guidelines](#contribution-tips-and-guidelines)
+- [Contribution tips and guidelines](#quick-contribution-tips-and-guidelines)
 
 ## Forks
 
 We encourage the use of forks, even for our core maintainers. The following steps describe the procedure to create a new fork and contribute back to the upstream repo:
 
-1. Fork `https://github.com/3blades/<repo-name>` repository to your user organization.
-1. Clone your copy of `https://github.com/your-username/<repo-name>` onto your machine using
-`git clone https://github.com/your-username/<repo-name>`.
-1. Specify a new remote upstream repository that will be synced with the fork: `git remote add upstream https://github.com/3blades/<repo-name>`.
-1. Verify correct `upstream` configuration: `git remote -v`
-1. Fetch the branches and their respective commits from the upstream repository. Commits to master will be stored in a local branch, `upstream/master`.
-1. Checkout your fork's local `feature` or `fix` branch: `git checkout my-fix-or-feature-branch`.
-1. Make the necessary changes in your `my-fix-or-feature-branch` branch. .
-1. Merge the changes from your local `my-fix-or-feature-branch` branch with `upstream/master`, ensuring that your local changes are in sync with upstream master branch: `git merge upstream/master`.
-1. Submit a pull request to `https://github.com/3blades/<repo-name>` and await review.
+### Clone the repo
+
+1. Fork this repository.
+1. Clone your forked repo onto your machine: `git clone https://github.com/<yourusername>/<repo-name>`
+1. Enter the cloned repo directory: `cd <repo-name>`
+1. Add the 3Blades repo as a new remote upstream repository: `git remote add upstream https://github.com/3blades/<repo-name>.git`
+1. Verify that `upstream` was added correctly: `git remote -v`
+1. Fetch the latest branches for all remotes: `git fetch --all`
+1. Set your local `master` branch to track `upstream/master`: `git branch -u upstream/master master`
+
+Initial setup is complete. Your local `master` branch now tracks to the `master` branch in the `3blades/<repo-name>` repository so you will always have the most up-to-date code when running `git pull` when on `master`.
+
+### Contribute code
+
+1. On `master`, pull the latest changes from `3blades/<repo-name>`: `git pull`
+1. Create a local branch for your feature or fix: `git checkout -b my-fix-or-feature-branch`
+1. Make the necessary changes in your `my-fix-or-feature-branch` branch and commit them.
+1. Push your changes to your remote: `git push -u origin my-fix-or-feature-branch`
+1. Submit a pull request from your branch to `https://github.com/3blades/<repo-name>` and await review.
+
+In your pull request description, please include the issue number related to your code changes. It's possible that an issue for the problem you are trying to solve does not exist in which case please help us open one. Even little things like typos in a document are worth documenting.
 
 ## Commit Messages
 
-Commit messages should be of the form:
- `<repo name>/<issue type>/ issue #<issue number> <commit info>`.
- 
-For example: `app-backend/fix/issue #101 -  Fix the bug.`
-
-Currently, the possible issue types are the following:
+Commit messages in `r<repo-name>` start with a prefix that coincides with a commit `label`. Labels are listed below:
 
 - `fix`: If the commit is working towards a bug fix.
 - `feature`: If the commit is working towards a new feature.
@@ -39,20 +45,15 @@ Currently, the possible issue types are the following:
 - `doc`: If the commit is a change to documentation.
 - `test`: If the commit contains a change to the test suite.
 
-Obviously, some commits may apply to multiple issue types (almost all commits should have tests, for example ;) ). Just use your best judgment in these cases.
-
-All commits **must** reference an issue. If there is not an issue relevant to your commit; help us open one.
-
-The commit message itself should be more informative than "Fix the bug" as seen in the example. Something like "Change the foo method in bar.py so an exception is raised for invalid arguments" is more appropriate.
-
 ## Issues
 
 When reporting issues:
 
 - Include the steps required to reproduce the problem. This information will help us review and fix your issue faster.
 - If applicable, include stack trace.
-- Big log files are best viewed in gist (https://gist.github.com). Make sure your gist is public.
+- Big log files are best viewed in a gist (https://gist.github.com). Make sure your gist is public.
 - Log files may have sensitive information, please remove this information if at all possible.
+- Add an issue reference to the body of the pull request text. This facilitates tracking.
 
 ## Quick contribution tips and guidelines
 
@@ -64,23 +65,21 @@ Developing a fix or new feature, however small, takes time. So thank you! Even t
 
 ### Design and cleanup proposals
 
-We are constantly cleaning code and re factoring, and understand there is almost always a better way to do things. If so, let us know! We love new perspectives, particularly when it helps improve the underlying product.
+We are constantly cleaning code and re-factoring, and we understand there is almost always a better way to do things. If so, let us know! We love new perspectives, particularly when it helps improve the underlying product.
 
 ### Talking to other 3Blades users and contributors
 
-We primarily use our Slack community channel to communicate with 3Blades users and contributors. You can sign up for a free account [here](https://slackin-pypmyuhqds.now.sh/).
+We primarily use our Slack community channel to communicate with 3Blades users and contributors. You can sign up for a free account [here](https://slack.3blades.io/).
 
 ### Conventions and Coding Style
 
-Submit unit tests with your changes. We primarily use [nosetests](http://nose.readthedocs.io/en/latest/usage.html) for Python, [jest](https://facebook.github.io/jest/) for React and [testing](https://golang.org/pkg/testing/) for Golang.
+Submit unit tests with your changes.
 
-Update the documentation when creating or modifying features. Test your
-documentation changes for clarity, concision, and correctness, as well as a
-clean documentation build. We base our style guide on the [AP Stylebook](https://en.wikipedia.org/wiki/AP_Stylebook).
+Update the documentation when creating or modifying features. Test your documentation changes for clarity, concision, and correctness, as well as a clean documentation build. We base our style guide on the [AP Stylebook](https://en.wikipedia.org/wiki/AP_Stylebook).
 
 For coding style, we base ourselves on:
 
-- [AriBnb style guide](https://github.com/3blades/javascript) for JavaScript
+- [AriBnb style guide](https://github.com/airbnb/javascript) for JavaScript
 - [PEP8](https://www.python.org/dev/peps/pep-0008/) for Python
 - [Effective Go](https://golang.org/doc/effective_go.html) for Golang
 
@@ -90,8 +89,7 @@ The PR should trigger automated style checks.
 
 The master branch needs to be as healthy as possible. We will do our best to merge code and documentation quickly, but need to balance that with sanity checks.
 
-Maintainers may use LGTM (Looks Good To Me) for documents and comments to
-indicate acceptance.
+Maintainers may use LGTM (Looks Good To Me) for documents and comments to indicate acceptance.
 
 ### Sign your work
 
