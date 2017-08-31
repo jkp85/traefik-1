@@ -37,13 +37,35 @@ In your pull request description, please include the issue number related to you
 
 ## Commit Messages
 
-Commit messages in `r<repo-name>` start with a prefix that coincides with a commit `label`. Labels are listed below:
+In general, there is no required format for individual commit messages so long as they are descriptive. 
+It is recommended, but not mandatory, to include an issue reference in the description of any pull request. 
 
-- `fix`: If the commit is working towards a bug fix.
-- `feature`: If the commit is working towards a new feature.
-- `chore`: If the commit was a chore, like updating a dependency or updating Travis.
-- `doc`: If the commit is a change to documentation.
-- `test`: If the commit contains a change to the test suite.
+The only hard and fast rules for commit messages pertain to merge commits themselves, 
+which are done by core contributors. Merge commits follow the [conventional commits](https://conventionalcommits.org) guidelines.
+
+Specifically, 3Blades uses the following format:
+
+```
+<type>: issue #<issuenumber> - <description>
+[optional body]
+```
+
+`type` comes from the issue linked by `issuenumber` (note that this implicitly requires a corresponding issue to exist before any PR can be merged), and is one of:
+
+* chore
+* doc 
+    - Updating documentation to reflect behavioral changes. Primarily used in the openapi repo.
+* epic 
+    - An issue that encompasses multiple issues required to complete a large issue. The epic label should rarely, if ever, be used for a pull request.
+* feature
+* fix
+* prototype 
+    - A proof of concept for an experimental feature.
+* question
+
+`description` should be short and sweet; a sentence at most.
+
+`body` is optional and should be relatively succinct. Anything more than 150 characters or so should be its own comment, or otherwise documented.
 
 ## Issues
 
