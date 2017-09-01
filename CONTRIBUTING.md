@@ -70,7 +70,7 @@ Specifically, 3Blades uses the following format:
 
 ### Example:
 
-[Merge Commit Example](home/john/Pictures/MergeCommitExample.png)
+[Merge Commit Example](./images/MergeCommitExample.png)
 
 ## Issues
 
