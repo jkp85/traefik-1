@@ -57,9 +57,10 @@ Specifically, 3Blades uses the following format:
     - Updating documentation to reflect behavioral changes. Primarily used in the openapi repo.
 * epic 
     - An issue that encompasses multiple issues required to complete a large issue. The epic label should rarely, if ever, be used for a pull request.
-* feature
+* feat
+    - Short for feature.
 * fix
-* prototype 
+* proto 
     - A proof of concept for an experimental feature.
 * question
 
