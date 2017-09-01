@@ -68,6 +68,12 @@ Specifically, 3Blades uses the following format:
 
 `body` is optional and should be relatively succinct. Anything more than 150 characters or so should be its own comment, or otherwise documented.
 
+### Example:
+
+    feature: issue #101 - Add Oauth
+    This PR allows users to authenticate via other social networks such as Github, Google, etc.
+
+
 ## Issues
 
 When reporting issues:
