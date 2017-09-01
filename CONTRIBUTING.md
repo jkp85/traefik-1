@@ -70,9 +70,7 @@ Specifically, 3Blades uses the following format:
 
 ### Example:
 
-    feature: issue #101 - Add Oauth
-    This PR allows users to authenticate via other social networks such as Github, Google, etc.
-
+[Merge Commit Example](home/john/Pictures/MergeCommitExample.png)
 
 ## Issues
 
