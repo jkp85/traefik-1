@@ -1,5 +1,8 @@
-# 3Blades Open Source
+# 3Blades Traefik
 
-Documentation and templates for Open Source management at 3Blades.
+Reverse Proxy for 3Blades
 
-Setup instructions [located here](project-template/INSTRUCTIONS.md).
+TODO:
+
+- [ ] Initial proxy configuration
+- [ ] Add configuration validation to Travis build
