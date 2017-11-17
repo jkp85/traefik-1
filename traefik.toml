@@ -147,7 +147,7 @@ watch = true
 
 [ecs]
 
-clusters = ["gpu"]
+clusters = ["dev"]
 watch = true
 
 refreshSeconds = 30
