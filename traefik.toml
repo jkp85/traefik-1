@@ -109,7 +109,7 @@ address = ":8080"
 # Optional
 # Default: ""
 #
-domain = "docker.3blades.ai"
+domain = "3blades.ai"
 
 # Expose containers by default in traefik
 #
@@ -139,3 +139,25 @@ watch = true
   backend = "userspace"
     [frontends.userspace.routes.server]
     rule = "PathPrefix:/{version}/{namespace}/projects/{project}/servers/{server}/endpoint"
+
+
+################################################################
+# ECS configuration backend
+################################################################
+
+[ecs]
+
+clusters = ["dev"]
+watch = true
+
+refreshSeconds = 30
+
+domain = "3blades.ai"
+
+exposedByDefault = false
+
+region = "us-west-2"
+
+accessKeyID = ""
+
+secretAccessKey = ""
