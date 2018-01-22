@@ -18,20 +18,20 @@ We encourage the use of forks, even for our core maintainers. The following step
 1. Fork this repository.
 1. Clone your forked repo onto your machine: `git clone https://github.com/<yourusername>/<repo-name>`
 1. Enter the cloned repo directory: `cd <repo-name>`
-1. Add the 3Blades repo as a new remote upstream repository: `git remote add upstream https://github.com/3blades/<repo-name>.git`
+1. Add the IllumiDesk repo as a new remote upstream repository: `git remote add upstream https://github.com/IllumiDesk/<repo-name>.git`
 1. Verify that `upstream` was added correctly: `git remote -v`
 1. Fetch the latest branches for all remotes: `git fetch --all`
 1. Set your local `master` branch to track `upstream/master`: `git branch -u upstream/master master`
 
-Initial setup is complete. Your local `master` branch now tracks to the `master` branch in the `3blades/<repo-name>` repository so you will always have the most up-to-date code when running `git pull` when on `master`.
+Initial setup is complete. Your local `master` branch now tracks to the `master` branch in the `IllumiDesk/<repo-name>` repository so you will always have the most up-to-date code when running `git pull` when on `master`.
 
 ### Contribute code
 
-1. On `master`, pull the latest changes from `3blades/<repo-name>`: `git pull`
+1. On `master`, pull the latest changes from `IllumiDesk/<repo-name>`: `git pull`
 1. Create a local branch for your feature or fix: `git checkout -b my-fix-or-feature-branch`
 1. Make the necessary changes in your `my-fix-or-feature-branch` branch and commit them.
 1. Push your changes to your remote: `git push -u origin my-fix-or-feature-branch`
-1. Submit a pull request from your branch to `https://github.com/3blades/<repo-name>` and await review.
+1. Submit a pull request from your branch to `https://github.com/IllumiDesk/<repo-name>` and await review.
 
 In your pull request description, please include the issue number related to your code changes. It's possible that an issue for the problem you are trying to solve does not exist in which case please help us open one. Even little things like typos in a document are worth documenting.
 
@@ -43,7 +43,7 @@ It is recommended, but not mandatory, to include an issue reference in the descr
 The only hard and fast rules for commit messages pertain to merge commits themselves, 
 which are done by core contributors. Merge commits follow the [conventional commits](https://conventionalcommits.org) guidelines.
 
-Specifically, 3Blades uses the following format:
+Specifically, IllumiDesk uses the following format:
 
 ```
 <type>: issue #<issuenumber> - <description>
@@ -94,9 +94,9 @@ Developing a fix or new feature, however small, takes time. So thank you! Even t
 
 We are constantly cleaning code and re-factoring, and we understand there is almost always a better way to do things. If so, let us know! We love new perspectives, particularly when it helps improve the underlying product.
 
-### Talking to other 3Blades users and contributors
+### Talking to other IllumiDesk users and contributors
 
-We primarily use our Slack community channel to communicate with 3Blades users and contributors. You can sign up for a free account [here](https://slack.3blades.io/).
+We primarily use our Slack community channel to communicate with IllumiDesk users and contributors. You can sign up for a free account [here](https://slack.IllumiDesk.io/).
 
 ### Conventions and Coding Style
 
@@ -131,6 +131,6 @@ Please use your real name.
 If you set your `user.name` and `user.email` git configs, you can sign your
 commit automatically with `git commit -s`.
 
-## 3Blades community guidelines
+## IllumiDesk community guidelines
 
 Refer to our [Code of Conduct](CODE_OF_CONDUCT.md) for specifics. It is based on the Contributor Covenant, version 1.4, available at http://contributor-covenant.org/version/1/4.

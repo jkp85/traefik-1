@@ -1,6 +1,6 @@
-# 3Blades Traefik
+# IllumiDesk Traefik
 
-Reverse Proxy for 3Blades
+Reverse Proxy for IllumiDesk
 
 TODO:
 
