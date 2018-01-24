@@ -10,4 +10,4 @@ script:
   #build the image
   - bash config/buildDockerImage.sh
 env:
-  - $DOCKER_IMAGE_NAME="3blades/traefik"
+  - $DOCKER_IMAGE_NAME="illumidesk/traefik"
