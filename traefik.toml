@@ -109,7 +109,7 @@ address = ":8080"
 # Optional
 # Default: ""
 #
-domain = "3blades.ai"
+domain = "illumidesk.com"
 
 # Expose containers by default in traefik
 #
@@ -152,7 +152,7 @@ watch = true
 
 refreshSeconds = 30
 
-domain = "3blades.ai"
+domain = "illumidesk.com"
 
 exposedByDefault = false
 
