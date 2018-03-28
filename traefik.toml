@@ -150,7 +150,7 @@ watch = true
 clusters = ["dev"]
 watch = true
 
-refreshSeconds = 30
+refreshSeconds = 4
 
 domain = "illumidesk.com"
 
