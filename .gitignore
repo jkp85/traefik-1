@@ -1,0 +1,14 @@
+/dist
+/autogen/genstatic/gen.go
+.idea/
+.intellij/
+*.iml
+/static/
+/webui/.tmp/
+.vscode/
+/site/
+*.log
+*.exe
+.DS_Store
+/examples/acme/acme.json
+.vscode

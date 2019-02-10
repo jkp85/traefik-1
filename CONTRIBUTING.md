@@ -68,10 +68,6 @@ Specifically, IllumiDesk uses the following format:
 
 `body` is optional and should be relatively succinct. Anything more than 150 characters or so should be its own comment, or otherwise documented.
 
-### Example:
-
-[Merge Commit Example](./images/MergeCommitExample.png)
-
 ## Issues
 
 When reporting issues:
@@ -96,7 +92,7 @@ We are constantly cleaning code and re-factoring, and we understand there is alm
 
 ### Talking to other IllumiDesk users and contributors
 
-We primarily use our Slack community channel to communicate with IllumiDesk users and contributors. You can sign up for a free account [here](https://slack.IllumiDesk.io/).
+We primarily use our Slack community channel to communicate with IllumiDesk users and contributors. You can sign up for a free account [here](https://illumidesk.slack.com/).
 
 ### Conventions and Coding Style
 
@@ -106,8 +102,6 @@ Update the documentation when creating or modifying features. Test your document
 
 For coding style, we base ourselves on:
 
-- [AriBnb style guide](https://github.com/airbnb/javascript) for JavaScript
-- [PEP8](https://www.python.org/dev/peps/pep-0008/) for Python
 - [Effective Go](https://golang.org/doc/effective_go.html) for Golang
 
 The PR should trigger automated style checks.
