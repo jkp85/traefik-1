@@ -7,14 +7,14 @@
 # Optional
 # Default: false
 #
-# debug = true
+debug = false
 
 # Log level
 #
 # Optional
 # Default: "ERROR"
 #
-# logLevel = "ERROR"
+logLevel = "ERROR"
 
 # Entrypoints to be used by frontends that do not specify any entrypoint.
 # Each frontend can specify its own entrypoints.
@@ -45,14 +45,14 @@ defaultEntryPoints = ["http"]
 # Optional
 # Default: os.Stdout
 #
-# filePath = "log/traefik.log"
+filePath = "log/traefik.log"
 
 # Format is either "json" or "common".
 #
 # Optional
 # Default: "common"
 #
-# format = "common"
+format = "common"
 
 # Enable access logs
 # By default it will write to stdout and produce logs in the textual
@@ -60,7 +60,7 @@ defaultEntryPoints = ["http"]
 #
 # Optional
 #
-# [accessLog]
+[accessLog]
 
 # Sets the file path for the access log. If not specified, stdout will be used.
 # Intermediate directories are created if necessary.
@@ -68,14 +68,14 @@ defaultEntryPoints = ["http"]
 # Optional
 # Default: os.Stdout
 #
-# filePath = "/path/to/log/log.txt"
+filePath = "/Users/gregwerner/log/traefik_log.txt"
 
 # Format is either "json" or "common".
 #
 # Optional
 # Default: "common"
 #
-# format = "common"
+format = "common"
 
 ################################################################
 # Web configuration backend
@@ -101,7 +101,7 @@ address = ":8080"
 # Required
 # Default: "unix:///var/run/docker.sock"
 #
-# endpoint = "tcp://10.10.10.10:2375"
+endpoint = "unix:///var/run/docker.sock"
 
 # Default domain used.
 # Can be overridden by setting the "traefik.domain" label on a container.
@@ -109,14 +109,14 @@ address = ":8080"
 # Optional
 # Default: ""
 #
-domain = "illumidesk.com"
+domain = "localhost"
 
 # Expose containers by default in traefik
 #
 # Optional
 # Default: true
 #
-# exposedbydefault = true
+exposedbydefault = true
 
 # Enable watch docker changes.
 #
@@ -139,25 +139,3 @@ watch = true
   backend = "userspace"
     [frontends.userspace.routes.server]
     rule = "PathPrefix:/{version}/{namespace}/projects/{project}/servers/{server}/endpoint"
-
-
-################################################################
-# ECS configuration backend
-################################################################
-
-[ecs]
-
-clusters = ["dev"]
-watch = true
-
-refreshSeconds = 4
-
-domain = "illumidesk.com"
-
-exposedByDefault = false
-
-region = "us-west-2"
-
-accessKeyID = ""
-
-secretAccessKey = ""
